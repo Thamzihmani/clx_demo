@@ -1,3 +1,4 @@
+import 'package:clx_demo/views/sign_up_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -279,7 +280,9 @@ class _SignInPageState extends State<SignInPage> {
                         SizedBox(
                           height: 20.sp,
                           child: ElevatedButton(
-                              onPressed: () {},
+                              onPressed: () {
+                                Navigator.push(context, MaterialPageRoute(builder: (context) => const SignUpPage(),));
+                              },
                               style: ElevatedButton.styleFrom(
                                   shape: RoundedRectangleBorder(
                                       borderRadius:
