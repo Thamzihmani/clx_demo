@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import 'buss_profile.dart';
+
 class SignUpPage extends StatefulWidget {
   const SignUpPage({Key? key}) : super(key: key);
 
@@ -123,7 +125,9 @@ class _SignUpPageState extends State<SignUpPage> {
                     style: ElevatedButton.styleFrom(backgroundColor: const Color(0xff87CEEB),
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(10.sp))),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => const BusinessProfilePage(),));
+                    },
                     child: Text(
                       "CREATE ACCOUNT",
                       style: TextStyle(
