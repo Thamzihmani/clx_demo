@@ -32,7 +32,7 @@ class _BusinessPageState extends State<BusinessPage> {
           ),
           SizedBox(height: 15.sp,),
           Text(
-            "0 of 6 Completed",
+            "0 of 7 Completed",
             style: TextStyle(
               fontSize: 12.sp,
               color: Colors.blue,

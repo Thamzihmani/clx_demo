@@ -3,6 +3,7 @@ import 'package:clx_demo/views/progress_pages/business_image.dart';
 import 'package:clx_demo/views/progress_pages/business_page.dart';
 import 'package:clx_demo/views/progress_pages/contact_info_page.dart';
 import 'package:clx_demo/views/progress_pages/google_location_page.dart';
+import 'package:clx_demo/views/progress_pages/publish_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -26,7 +27,8 @@ class _ProfilePageState extends State<ProfilePage> {
       const BusinessDescriptionPage(),
       const BusinessImagePage(index: 4),
       const BusinessImagePage(index: 5),
-      const BusinessImagePage(index: 6)
+      const BusinessImagePage(index: 6),
+      const PublishPage()
     ];
     return Scaffold(
       body: Container(
