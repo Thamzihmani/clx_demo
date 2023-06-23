@@ -1,3 +1,4 @@
+import 'package:clx_demo/views/completion_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -78,7 +79,9 @@ class _PublishPageState extends State<PublishPage> {
           ),
           SizedBox(height: 15.sp,),
           ElevatedButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const CompletionPage(),));
+            },
             style: ElevatedButton.styleFrom(
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(20.sp))),
