@@ -1,4 +1,4 @@
-import 'package:clx_demo/views/sign_up_page.dart';
+import 'package:clx_demo/views/sign__page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

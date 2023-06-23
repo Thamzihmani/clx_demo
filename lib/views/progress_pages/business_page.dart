@@ -1,38 +1,28 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class BusinessProfilePage extends StatefulWidget {
-  const BusinessProfilePage({Key? key}) : super(key: key);
+class BusinessPage extends StatefulWidget {
+  const BusinessPage({Key? key}) : super(key: key);
 
   @override
-  State<BusinessProfilePage> createState() => _BusinessProfilePageState();
+  State<BusinessPage> createState() => _BusinessPageState();
 }
 
-class _BusinessProfilePageState extends State<BusinessProfilePage> {
+class _BusinessPageState extends State<BusinessPage> {
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     var height = size.height;
     var width = size.width;
-    return Scaffold(
-      body: Container(
-        height: double.infinity,
-        width: double.infinity,
-        decoration: BoxDecoration(
-            gradient: LinearGradient(
-                colors: [Theme.of(context).primaryColor, Colors.white],
-                begin: Alignment.topCenter,
-                stops: [0.0.sp, 0.3.sp],
-                end: Alignment.bottomCenter)),
-        child: Column(
-            children: [
-              SizedBox(height: 80.sp,),
+    return Column(
+        children: [
+          SizedBox(height: 80.sp,),
           SizedBox(
             width: double.infinity,
-            height: 100.sp,
+            height: 80.sp,
             child: const Image(image: AssetImage("assets/icons/ic_house.png")),
           ),
-              SizedBox(height: 20.sp,),
+          SizedBox(height: 20.sp,),
           Text(
             "Business Profile",
             style: TextStyle(
@@ -40,7 +30,7 @@ class _BusinessProfilePageState extends State<BusinessProfilePage> {
                 color: Colors.blue,
                 fontWeight: FontWeight.bold),
           ),
-              SizedBox(height: 15.sp,),
+          SizedBox(height: 15.sp,),
           Text(
             "0 of 6 Completed",
             style: TextStyle(
@@ -48,15 +38,7 @@ class _BusinessProfilePageState extends State<BusinessProfilePage> {
               color: Colors.blue,
             ),
           ),
-              SizedBox(height:5.sp,),
-          /*  RoundedProgressBar(
-            style: RoundedProgressBarStyle(
-                borderWidth: 0.1.sp,backgroundProgress: Colors.blue,colorProgress: Colors.white),
-            margin: EdgeInsets.symmetric(horizontal: 20.sp,vertical: 20.sp),
-            borderRadius: BorderRadius.circular(25.sp),height: 10.sp,
-            percent: 10,
-          ),*/
-
+          SizedBox(height:5.sp,),
           Container(
             width: double.infinity,
             decoration: BoxDecoration(border: Border.all(color: Theme.of(context).primaryColor),
@@ -82,7 +64,7 @@ class _BusinessProfilePageState extends State<BusinessProfilePage> {
                 color: Colors.black,
                 fontWeight: FontWeight.bold),
           ),
-              SizedBox(height: 20.sp,),
+          SizedBox(height: 20.sp,),
           Text(
             "Start Building your\n Business Profile",
             style: TextStyle(
@@ -90,7 +72,7 @@ class _BusinessProfilePageState extends State<BusinessProfilePage> {
               color: Colors.black54,
             ),
           ),
-              SizedBox(height: 20.sp,),
+          SizedBox(height: 20.sp,),
           Container(
             width: double.infinity,
             margin: EdgeInsets.symmetric(horizontal: 60.sp),
@@ -133,28 +115,21 @@ class _BusinessProfilePageState extends State<BusinessProfilePage> {
             ),
           ),
           const Spacer(),
-          Row(mainAxisAlignment: MainAxisAlignment.start,crossAxisAlignment: CrossAxisAlignment.end,
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const SizedBox(
-                child: Image(image: AssetImage("assets/icons/ic_person.png")),
-              ), const Spacer(),
-              Padding(
-                padding:  EdgeInsets.only(bottom: 10.sp),
-                child: Text("SWIPE",style: TextStyle(fontSize: 14.sp,color: Colors.blue),),
-              ),
-              Container(
-                margin:EdgeInsets.only(bottom: 4.sp) ,
-                width: 50.sp,
-                child: const Image(image: AssetImage("assets/icons/ic_swipe_right.png")),
-              ), const Spacer(),
-              SizedBox(
-                width: 50.sp,
-                child: const Image(image: AssetImage("assets/icons/ic_pot.png")),
-              ),
-            ],
-          ),
-        ]),
-      ),
-    );
+              SizedBox(width: 50.sp,),
+            Padding(
+              padding:  EdgeInsets.only(bottom: 5.sp),
+              child: Text("SWIPE",style: TextStyle(fontSize: 14.sp,color: Colors.blue),),
+            ),
+            Container(
+              margin:EdgeInsets.only(bottom: 4.sp) ,
+              width: 50.sp,
+              child: const Image(image: AssetImage("assets/icons/ic_swipe_right.png")),
+            ),
+          ],)
+
+        ]);
   }
 }
