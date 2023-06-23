@@ -16,7 +16,7 @@ class _GoogleLocationPageState extends State<GoogleLocationPage> {
     var width = size.width;
     return Column(
         children: [
-          SizedBox(height: 80.sp,),
+          SizedBox(height: 40.sp,),
           SizedBox(
             width: double.infinity,
             height: 80.sp,
@@ -56,7 +56,7 @@ class _GoogleLocationPageState extends State<GoogleLocationPage> {
               ],
             ),
           ),
-          SizedBox(height: 60.sp,),
+          SizedBox(height: 40.sp,),
           Text(
             "PIN YOUR BUSINESS LOCATION",
             style: TextStyle(
@@ -73,7 +73,10 @@ class _GoogleLocationPageState extends State<GoogleLocationPage> {
             ),
           ),
           SizedBox(height: 20.sp,),
-
+          Container(
+            width: (width/1.5).sp,
+            height: 200.sp,color: Colors.grey,
+          ),
           const Spacer(),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -93,7 +96,6 @@ class _GoogleLocationPageState extends State<GoogleLocationPage> {
                 child: const Image(image: AssetImage("assets/icons/ic_swipe_right.png")),
               ),
             ],)
-
-        ]);;
+        ]);
   }
 }

@@ -1,3 +1,5 @@
+import 'package:clx_demo/views/progress_pages/business_desp_page.dart';
+import 'package:clx_demo/views/progress_pages/business_image.dart';
 import 'package:clx_demo/views/progress_pages/business_page.dart';
 import 'package:clx_demo/views/progress_pages/contact_info_page.dart';
 import 'package:clx_demo/views/progress_pages/google_location_page.dart';
@@ -20,8 +22,11 @@ class _ProfilePageState extends State<ProfilePage> {
     List<Widget> pageWidget = [
       const BusinessPage(),
       const ContactInfoPage(),
-      const GoogleLocationPage()
-
+      const GoogleLocationPage(),
+      const BusinessDescriptionPage(),
+      const BusinessImagePage(index: 4),
+      const BusinessImagePage(index: 5),
+      const BusinessImagePage(index: 6)
     ];
     return Scaffold(
       body: Container(
