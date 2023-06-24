@@ -148,8 +148,6 @@ class _DashboardPageState extends State<DashboardPage> {
                     onPressed: () async {
                       SharedPreferences preference =
                           await SharedPreferences.getInstance();
-                      preference.remove(Strings.userName);
-                      preference.remove(Strings.password);
                       preference.remove(Strings.freshUser);
                       Navigator.pushAndRemoveUntil(
                           context,
