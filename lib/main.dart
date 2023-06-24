@@ -1,4 +1,5 @@
 import 'package:clx_demo/views/sign_in_page.dart';
+import 'package:clx_demo/views/splash_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
       minTextAdapt: true,
       builder: (context, child) => const MaterialApp(
         title: 'CLX Demo-App',
-        home: SignInPage(),
+        home: SplashPage(),
       ),
     );
   }

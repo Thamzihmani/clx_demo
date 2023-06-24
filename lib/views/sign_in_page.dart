@@ -185,6 +185,7 @@ class _SignInPageState extends State<SignInPage> {
                               if(_formKey.currentState!.validate()){
                                 final  name = preference.getString(Strings.userName);
                                 final password =  preference.getString(Strings.password);
+                                preference.setBool(Strings.freshUser, false);
                                 if(name != nameController.text || passwordController.text != password ){
                                   ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text("Invalid Credential")));
                                 }

@@ -1,6 +1,8 @@
+import 'package:clx_demo/constants/strings.dart';
 import 'package:clx_demo/views/completion_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class PublishPage extends StatefulWidget {
   const PublishPage({Key? key}) : super(key: key);
@@ -79,7 +81,7 @@ class _PublishPageState extends State<PublishPage> {
           ),
           SizedBox(height: 15.sp,),
           ElevatedButton(
-            onPressed: () {
+            onPressed: (){
               Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const CompletionPage(),));
             },
             style: ElevatedButton.styleFrom(
@@ -106,7 +108,7 @@ class _PublishPageState extends State<PublishPage> {
               Container(
                 margin:EdgeInsets.only(bottom: 4.sp) ,
                 width: 50.sp,
-                child: const Image(image: AssetImage("assets/icons/ic_swipe_right.png")),
+               // child: const Image(image: AssetImage("assets/icons/ic_swipe_right.png")),
               ),
             ],)
         ]);

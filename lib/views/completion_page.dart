@@ -1,3 +1,4 @@
+import 'package:clx_demo/views/progress_pages/dashboard.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -57,7 +58,7 @@ class _CompletionPageState extends State<CompletionPage> {
                   SizedBox(height: 10.sp,),
                   ElevatedButton(
                     onPressed: () {
-                      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const CompletionPage(),));
+                      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const DashboardPage(),));
                     },
                     style: ElevatedButton.styleFrom(backgroundColor: Colors.blue.withOpacity(0.5),
                         shape: RoundedRectangleBorder(
@@ -69,7 +70,6 @@ class _CompletionPageState extends State<CompletionPage> {
                   ),
                   ElevatedButton(
                     onPressed: () {
-                      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const CompletionPage(),));
                     },
                     style: ElevatedButton.styleFrom(
                         shape: RoundedRectangleBorder(
