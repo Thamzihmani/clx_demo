@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 class GoogleLocationPage extends StatefulWidget {
   const GoogleLocationPage({Key? key}) : super(key: key);
@@ -75,7 +76,11 @@ class _GoogleLocationPageState extends State<GoogleLocationPage> {
           SizedBox(height: 20.sp,),
           Container(
             width: (width/1.5).sp,
-            height: 200.sp,color: Colors.grey,
+            height: 200.sp,
+           child:  const GoogleMap(
+              mapType: MapType.normal,
+              initialCameraPosition:  CameraPosition(target: LatLng(11.916064, 79.812325),zoom: 10),
+            ),
           ),
           const Spacer(),
           Row(

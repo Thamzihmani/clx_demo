@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:max_country_picker/view/country_picker.dart';
 
 class ContactInfoPage extends StatefulWidget {
   const ContactInfoPage({Key? key}) : super(key: key);
@@ -175,11 +176,28 @@ class _ContactInfoPageState extends State<ContactInfoPage> {
                 border: Border.all(
                     width: 1.sp, color: Theme.of(context).primaryColor),
                 borderRadius: BorderRadius.circular(10.sp)),
-            child: Center(
-              child: Text(
-                "Mobile Number",
-                style: TextStyle(fontSize: 16.sp,color: Colors.blueGrey[200]),
-              ),
+            child: Row(
+              children: [
+                SizedBox(
+                  height:25.sp,
+                  child: MaxCountryPicker(
+                    flagMode: FlagMode.square,
+                    viewMode: ViewMode.page,
+                    initialCountryCode: 'IN',showFlagIcon: true,showDropDown: true,flagIconSize: 20.sp,
+                    onCanged: (value) {
+                      setState(() {
+                        print("Flag code"+value.code.toString());
+                      });
+                    },
+                  ),
+                ),
+                Center(
+                  child: Text(
+                    "Mobile Number",
+                    style: TextStyle(fontSize: 16.sp,color: Colors.blueGrey[200]),
+                  ),
+                ),
+              ],
             ),
           ),
           const Spacer(),
