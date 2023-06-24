@@ -1,4 +1,5 @@
 import 'package:clx_demo/constants/strings.dart';
+import 'package:clx_demo/views/intro_page.dart';
 import 'package:clx_demo/views/progress_pages/dashboard.dart';
 import 'package:clx_demo/views/sign_in_page.dart';
 import 'package:flutter/material.dart';
@@ -22,7 +23,7 @@ class _SplashPageState extends State<SplashPage> {
             () => Navigator.pushReplacement(
             context,
             MaterialPageRoute(
-              builder: (context) =>freshUser ?  const SignInPage() : const DashboardPage(),
+              builder: (context) =>freshUser ?  const IntroductionPage() : const DashboardPage(),
             )),
       );
     });

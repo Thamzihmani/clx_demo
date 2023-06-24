@@ -10,13 +10,12 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
       designSize: ScreenUtil.defaultSize,
       minTextAdapt: true,
-      builder: (context, child) => const MaterialApp(
+      builder: (context, child) => const MaterialApp(debugShowCheckedModeBanner: false,
         title: 'CLX Demo-App',
         home: SplashPage(),
       ),

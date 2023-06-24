@@ -112,6 +112,7 @@ class _SignInPageState extends State<SignInPage> {
                         child: TextFormField(
                           controller: passwordController,
                           focusNode: passwordNode,
+                          obscureText: passwordVisible ? false : true,
                           textInputAction: TextInputAction.done,
                           decoration: InputDecoration(errorStyle: const TextStyle(height: 0),
                               hintText: "Password",
